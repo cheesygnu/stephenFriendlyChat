@@ -80,17 +80,10 @@ export class ChatService {
         this.router.navigate(['/', 'chat']);
         return credential;
     })
-   }
+  }
 
   // Logout of Friendly Chat.
-  logout() {
-    signOut(this.auth).then(() => {
-        this.router.navigate(['/', 'login'])
-        console.log('signed out');
-    }).catch((error) => {
-        console.log('sign out error: ' + error);
-    })
-   }
+  logout() {}
 
   // Adds a text or image message to Cloud Firestore.
   addMessage = async (
